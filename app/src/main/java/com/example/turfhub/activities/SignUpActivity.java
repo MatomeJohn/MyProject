@@ -60,7 +60,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         mRegisterButton.setOnClickListener(v -> {
             String emailPatterns = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-            String[] allowedEmailDomains = {"outlook.com", "yahoo.com", "gmail.com", "keyaka.ul.ac.za"};
+            String[] allowedEmailDomains = {"outlook.com", "yahoo.com", "gmail.com"};
             String email = mEmail.getText().toString().trim();
             String password = mPassword.getText().toString().trim();
             String name = mFullName.getText().toString().trim();
@@ -70,8 +70,25 @@ public class SignUpActivity extends AppCompatActivity {
                 mFullName.setError("Name is Required");
                 return;
             }
+            if (TextUtils.isEmpty(password)){
+
+                mPassword.setError("Password is required");
+                return;
+            }
+
+            if (password.length()<6){
+
+                mPassword.setError("password must be 6 or more characters");
+                return;
+
+            }
             if (TextUtils.isEmpty(confirmPassword)){
                 mConfirmPassword.setError("Confirm password is Required");
+                return;
+            }
+            else if (confirmPassword.isEmpty() || !confirmPassword.equals(password)){
+
+                mConfirmPassword.setError("Passwords do not match");
                 return;
             }
 
@@ -85,7 +102,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                 } else {
                     // Email address is not allowed
-                    mEmail.setError("Email not allowed");
+                    mEmail.setError("Email is not valid");
                     return;
                 }
             } else {
@@ -104,22 +121,7 @@ public class SignUpActivity extends AppCompatActivity {
                 return;
             }*/
 
-            if (TextUtils.isEmpty(password)){
 
-                mPassword.setError("Password is required");
-                return;
-            }
-
-            if (password.length()<6){
-
-                mPassword.setError("pass must be 6 or more characters");
-                return;
-
-            }else if (confirmPassword.isEmpty() || !confirmPassword.equals(password)){
-
-                mConfirmPassword.setError("Passwords do not match");
-                return;
-            }
 
             progressBar.setVisibility(View.VISIBLE);
 
