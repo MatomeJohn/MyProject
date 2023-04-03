@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "75424661329",
+    "project_id": "turf-hub",
+    "storage_bucket": "turf-hub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75424661329:android:ed320445a2d8a991a01d70",
+        "android_client_info": {
+          "package_name": "com.example.turfhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75424661329-jkfoml77kp7e5l97c0rn8sn3ah48m95l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPMe98LhFtGoVaBEgnrfVz0lY-0SZBvJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75424661329-jkfoml77kp7e5l97c0rn8sn3ah48m95l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
